@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            /* background-color: rgb(240, 242, 245); */
+            margin: 0px auto;
+            height: 800px;
+        }
+        section{
+            text-align: center;
+            padding: 20px 0 130px 0;
+            background-color: #f0f2f5;
+        }
+        .div1{
+            display: inline-block;
+            text-align: left;
+            width: 500px;
+            height: 230px;
+            padding: 0 50px;
+            position: relative;
+            bottom: 150px;
+        }
+
+        .div1 h2 {
+            margin-left: 30px;
+            margin-top: -20px;
+            font-size: 26px;
+            font-weight: normal;
+        }
+
+        .div2{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 1px gainsboro;
+            display: inline-block;
+            width: 400px;
+            height: 350px;
+        }
+        .div3{
+            display: inline-block;
+            width: 400px;
+            height: 350px;
+            margin: 40px 0 0;
+            padding: 20px 0 28px;
+        }
+
+        .userid{
+            margin-top: 20px;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 330px;
+            border-radius: 7px;
+            border: 1px solid gainsboro;
+        }
+        .pwd{
+            width: 330px;
+            padding: 14px 16px;
+            font-size: 17px;
+            border-radius: 7px;
+            border: 1px solid gainsboro;
+            margin-top: 10px;
+        }
+        .login{
+            width: 365px;
+            padding: 12px 16px;
+            font-size: 20px;
+            border-radius: 7px;
+            border: 0;
+            margin-top: 10px;
+            background-color: #1877f2;
+            color: white;
+        }
+        .login:hover{
+            background-color: #166fe5;
+        }
+        .userid:focus{
+            outline: none;
+            border: 1px solid #166fe5;
+            box-shadow: 0 0 2px 2px #9cbde974;
+            opacity: 0.6;
+        }
+        .pwd:focus{
+            outline: none;
+            border: 1px solid #166fe5;
+            box-shadow: 0 0 2px 2px #9cbde974;
+            opacity: 0.6;
+        }
+        .line{
+            border-bottom: 1px solid gainsboro;
+            width: 370px;
+            margin-left: 15px;
+            display: inline-block;
+        }
+        #question{
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        #question:hover{
+            text-decoration: underline;
+        }
+
+        #makeId{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 7px;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            background-color: #42b72a;
+        }
+        #makeId:hover{
+            background-color: #36a420 ;
+        }
+        #p1{
+            text-align: center;
+            margin-top: 28px;
+            font-size: 14px;
+        }
+        #p1 span{
+            font-weight: 600;
+        }
+        #p1 span:hover{
+            text-decoration: underline;
+        }
+        footer{
+            margin-top: 20px;
+            font-size: 12px;
+            background-color: white;
+        }
+
+        .pageFooter{
+            color: #737373;
+            margin: 0 auto;
+            width: 980px;
+        }
+        footer ul {
+            list-style: none;
+            display: inline;
+        }
+
+        footer li {
+            margin: 0px 20px;
+            float: left;
+            margin-left: -1px;
+        }
+
+        footer ul li {
+            color: #737373;
+        }
+        #plus{  
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            width: 26px;
+            height: 18px;
+            line-height: 12px;
+            background-color: #f5f6f7;
+            border: 1px solid gainsboro;
+            position: relative;
+            bottom: 3px;
+            border-radius: 2px;
+            text-decoration: none;
+            color: #69707f;
+            text-align: center;
+            
+        }
+        #plus:hover{
+            background-color: #ebedf0;
+        }
+        #float_clear{
+            clear: both;
+        }
+
+        li:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="div1">
+            <div class="facebook">
+                <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebook" width="301.06">
+                <h2>Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를 나눠보세요.</h2>
+            </div>
+        </div>
+
+        <div class="div3">
+            <div class="div2">
+                <form action="">
+                    <input type="text" name="email" id="email" placeholder="이메일 또는 전화번호" class="userid"> <br>
+                    <input type="password" name="pwd" id="pwd" placeholder="비밀번호" class="pwd"><br>
+                    <input type="submit" value="로그인" class="login">
+                </form>
+                    <a href="#" id="question">비밀번호를 잊으셨나요?</a>
+                    <div class="line"></div>
+                    <a href="#" id="makeId">새 계정 만들기</a>
+            </div>
+             <p style="text-align: center;" id="p1">유명인, 브랜드 또는 비즈니스를 위한 <span> 페이지 만들기.</span></p>
+        </div>
+            
+    </section>
+
+
+
+    <footer>
+        <div class="pageFooter">
+            <ul>
+                <li>한국어</li>
+                <a href="#"><li title="English (US)">English (US)</li></a>
+                <a href="#"><li title="Vietnamese">Tiếng Việt</li></a>
+                <a href="#"><li title="Indonesian">Bahasa Indonesia</li></a>
+                <a href="#"><li title="Thai">ภาษาไทย</li></a>
+                <a href="#"><li title="Spanish">Español</li></a>
+                <a href="#"><li title="Simplified Chinese (China)">中文(简体)</li></a>
+                <a href="#"><li title="Japanese">日本語</li></a>
+                <a href="#"><li title="Portuguese (Brazil)">Português (Brasil)</li></a>
+                <a href="#"><li title="French (France)">Français (France)</li></a>
+                <a href="#"><li title="German">Deutsch</li>
+                <li title="더 많은 언어 표시하기"></a>
+                    <a href="#" role="button" id="plus">&plus;</a>
+                </li>
+                <div id="float_clear"></div>
+            </ul>
+    
+            <hr>
+    
+            <ul>
+                <a href="#"><li title="Facebook에 가입하기">가입하기</li></a>
+                <a href="#"><li title="Facebook에 로그인">로그인</li></a>
+                <a href="#"><li title="Messenger를 확인하세요.">Messenger</li></a>
+                <a href="#"><li title="Android용 Facebook Lite">Facebook Lite</li></a>
+                <a href="#"><li title="Watch 동영상을 둘러보세요.">Watch</li></a>
+                <a href="#"><li title="Facebook에서 다양한 명소를 확인해보세요.">장소</li></a>
+                <a href="#"><li title="Facebook 게임을 확인해보세요.">게임</li></a>
+                <a href="#"><li title="Facebook Marketplace를 통해 물품을 거래해보세요.">Marketplace</li></a>
+                <a href="#"><li title="Facebook Pay에 대해 더 알아보기">Facebook Pay</li></a>
+                <a href="#"><li title="Oculus에 대해 더 알아보기">Oculus</li></a>
+                <a href="#"><li title="Facebook Portal에 대해 더 알아보기">Portal</li></a>
+                <a href="#"><li title="Instagram 확인하기">Instagram</li></a>
+                <a href="#"><li title="Bulletin 뉴스레터 확인하기">Bulletin</li></a>
+                <a href="#"><li title="지역 리스트 디렉터리를 둘러보세요.">지역</li></a>
+                <a href="#"><li title="가치 있는 일에 기부해보세요.">기부 캠페인</li></a>
+                <a href="#"><li title="Facebook 서비스 디렉터리를 둘러보세요.">서비스</li></a>
+                <a href="#"><li title="투표 정보 센터 보기.">투표 정보 센터</li></a>
+                <a href="#"><li title="그룹 둘러보기.">그룹</li></a>
+                <a href="#"><li title="Facebook 페이지에서 다양한 글과 정보를 읽어보세요. 취업 정보도 확인할 수 있습니다.">정보</li></a>
+                <a href="#"><li title="Facebook 광고로 마케팅 성과를 높여보세요.">광고 만들기</li></a>
+                <a href="#"><li title="페이지 만들기">페이지 만들기</li></a>
+                <a href="#"><li title="Facebook 플랫폼 기반 개발자를 위한 공간입니다.">개발자</li></a>
+                <a href="#"><li title="함께할 유능한 인재를 찾습니다.">채용 정보</li></a>
+                <a href="#"><li title="Facebook의 개인정보처리방침에 대해 알려드립니다.">개인정보처리방침</li></a>
+                <a href="#"><li title="쿠키와 Facebook에 대해 알아보세요.">쿠키</li></a>
+                <a href="#"><li title="AdChoices에 대해 알아보세요.">AdChoices</li></a>
+                <a href="#"><li title="약관과 정책을 살펴보세요.">이용 약관</li></a>
+                <a href="#"><li title="고객 센터를 방문하세요.">고객 센터</li></a>
+                <a href="#"><li title="연락처 업로드 및 비사용자를 위한 알림 링크를 방문하세요.">연락처 업로드 및 비사용자</li></a>
+                <div id="float_clear"></div>
+            </ul>
+    
+            <br>
+    
+            <p>Meta © 2022</p>
+        </div>
+    </footer>
+</body>
+</html>
