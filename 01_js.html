@@ -1,0 +1,76 @@
+﻿<!-- <!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>자바스크립트 예제</title>
+	<script>
+	    var num=0;
+        document.write("head 태그 내 실행 순서 : " + num + "<br/>");
+	</script>
+	<script>
+	    var num=1;
+        document.write("head 태그 내 실행 순서 : " + num + "<br/>");
+	</script>
+</head>
+<body>
+	<script>
+	    var num=2;
+        document.write("body 태그 내 실행 순서 : " + num + "<br/>");
+	</script>
+	<script>
+	    var num = 3;
+        document.write("body 태그 내 실행 순서 : " + num + "<br/>");
+	</script>
+</body>
+</html> -->
+
+<!-- --------------------------------------------------- -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="ico/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="http://localhost:8080/sample.css" crossorigin="anonymous">
+
+	<script>
+		var num = 0;  // 변수정의
+		
+		// 아래의 메소드 시그니쳐는 자바스크립트의 시그니쳐가 아니라 Typescript란 언어의 시그니쳐임
+		// (method) Document.write(...text: string[]): void
+		document.write("1. head 태그 내 실행 순서 : " , num , "<br/>");
+	</script>
+
+	<script>
+		var num = 1; // 변수정의
+
+		document.write("2. head 태그 내 실행 순서 : " , num , "<br/>");
+	</script>
+</head>
+
+<body>
+	<script>
+		var num = 2; // 변수선언 및 초기화 => 변수정의!
+
+		// 웹브라우저 화면의 Viewpoint 영역에 문자열 출력 메소드 호출 : 무조건 외우자!!!
+		document.write("3. body 태그 내 실행 순서 : " , num , "<br/>");
+	</script>	
+
+	<script>
+		var num = 3;
+
+		// document.write("4. body 태그 내 실행 순서 : " , num , "<br/>");
+		console.log("4. body 태그 내 실행 순서 : " , num , "<br/>");		
+	</script>
+</body>
+</html>
+
+<!-- CORS policy : 동일출처 원칙에 위배됨에 따라, 더 이상 외부사이트의 스크립트 파일을 사용하는 것을 막아버림  -->
+<script src="http://localhost:8080/sample.js" crossorigin="anonymous"></script>
