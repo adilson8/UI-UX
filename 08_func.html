@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        // JS언어도 함수의 Overloading을 지원할까?! -> NO!
+        function add() {
+            console.debug("----------1----------"); 
+            let sum = 1;
+            return sum;
+        }
+
+        function add(x) {
+            console.debug("----------2----------");
+            let sum = x + 1;
+            return sum;
+        }
+
+        function add(x, y) {
+            console.debug("----------3----------");
+            let sum = x + y;
+            return sum;
+        }
+
+        function add(x, y, z) {
+            console.debug("----------4----------");
+            console.log(``);
+
+            let sum = x + y + z;
+            return sum;
+        }
+
+        var r0 = add();               // 위의 4개의 add 함수 중 , 어느 것이 호출되는가?
+        var r1 = add(1);              // 위의 4개의 add 함수 중 , 어느 것이 호출되는가?
+        var r2 = add(2, 3);           // 위의 4개의 add 함수 중 , 어느 것이 호출되는가?
+        var r3 = add(4, 5, 6);        // 위의 4개의 add 함수 중 , 어느 것이 호출되는가?
+        var r4 = add(7, 8, 9, 10);    // 위의 4개의 add 함수 중 , 어느 것이 호출되는가?
+
+        document.write("함수 호출 인자 없음 : " + r0 + "<p/>");
+        document.write("함수 호출 인자 부족 : " + r1 + "<p/>");
+        document.write("함수 호출 인자 부족 : " + r2 + "<p/>");
+        document.write("정상적인 함수 호출 : " + r3 + "<p/>");
+        document.write("7, 8, 9만 인자값으로 적용 : " + r4 + "<p/>");
+    </script>
+</body>
+
+</html>

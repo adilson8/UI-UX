@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        // named function
+        function add(x, y) { // 완벽한 함수 선언문 -> 1급 객체 : 미리 메모리에 객체로 생성
+            return x + y;
+        } // add
+
+        // 함수의 1급 객체의 성질 : 함수를 변수에 대입가능하다! 
+        // (함수표현식 뿐만 아니라, 정상적인 기본함수도가능)
+        const calSum = add;    // 함수를 변수에 할당
+        const addUp = add;     // 함수를 변수에 할당
+        
+        const ttt = (x,y) =>  x + y;
+
+        document.write("결과 값 : " + calSum(5, 10) + "<br>");
+        document.write("결과 값 : " + addUp(3, 20) + "<br>");
+    </script>
+</body>
+
+</html>
