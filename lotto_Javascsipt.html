@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 대박 가즈아</title>
+</head>
+
+<body>
+    <button onclick="lotto(1,45)">로또 추첨</button>
+    
+    <script>        
+        function lotto( minValue, maxValue) {
+            console.clear();
+            var set = new Set();
+
+            while(set.size !== 7){
+                let num = parseInt((Math.random() * (maxValue - minValue + 1 )) + (minValue));
+                set.add(num);
+            }
+
+            console.log(set);
+
+            set.forEach(element => console.log(element));
+
+            set.clear();
+        }
+    </script>
+</body>
+</html>
