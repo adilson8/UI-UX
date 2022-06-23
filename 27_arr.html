@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        console.clear();
+        console.group('sort');
+
+        var ndata1 = [19, 38, 67, 26, 55, 24, 53, 12, 31];
+        var ndata2 = [132, 2, 41, 123, 45, 1234, 6, 29, 4567];
+        var edata = ['Apple', 'Html', 'Game', 'Computer', 'Java'];
+        var kdata = ['서울', '부산', '구포', '대구', '인천'];
+
+        console.log('ndata1.sort : ' + ndata1.sort());
+        console.log('ndata2.sort : ' + ndata2.sort()); // 사전순서 정렬
+
+        // Comparator : 2개의 값을 받고 크기를 비교해서 누가 크고 작은지 숫자로 반환
+        // 만일 두개의 숫자 num1, num2가 있다고 할 때, 아래와 같이 크기 결과를 반환
+        // (1) if num1 > num2 -> return + (양수값) => 보통 1반환
+        // (2) if num1 == num2 -> return 0
+        // (3) if num1 < num2 -> return - (음수값) => 보통 -1반환
+        console.log('ndata3.sort : ' + ndata2.sort(function (a, b) { return a - b; })); // 오름차순
+        console.log('ndata4.sort : ' + ndata2.sort(function (a, b) { return b - a; })); // 내림차순
+
+        console.log('edata.sort : ' + edata.sort());
+        console.log('kdata.sort : ' + kdata.sort());
+
+        // document.write("수치 정렬1 : " + ndata1.sort() + "<p/>");
+        // document.write("수치 정렬2 : " + ndata2.sort() + "<p/>");
+        // document.write("수치 정렬3 : " + ndata2.sort(function (a, b) { return a - b; }) + "<p/>");
+        // document.write("영문 정렬 : " + edata.sort() + "<p/>");
+        // document.write("한글 정렬 : " + kdata.sort() + "<p/>"); 
+
+        console.groupEnd();
+    </script>
+</body>
+
+</html>
