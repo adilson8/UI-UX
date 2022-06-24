@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="carname"></p>
+    <p id="carcolor"></p>
+    <p id="carspeed"></p>
+    
+    <script>
+        var car = new Object();      // 객체 생성
+        
+        car.name = 'Sonata';         // 속성 정의
+        car.speed = 100;
+        car.color = 'blue';
+
+        car.speedup = function () {  // 메소드 정의
+            return this.speed + 10;
+        };
+
+        console.log('car:', car);
+    </script>
+</body>
+
+</html>

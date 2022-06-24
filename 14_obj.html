@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="digClock"></div>
+    
+    <script>
+        function digClock() {
+            let now = new Date();   // get now
+
+            // 날짜와 시간 조합
+            let day = now.getMonth() + 1 + "월 " + now.getDate() + "일 ";
+            let time = now.getHours() + "시 " + now.getMinutes() + "분 " + now.getSeconds() + "초";
+
+            // Text Node 조합
+            document.querySelector("#digClock").innerHTML = day + time;
+        } // digClock
+               
+        setInterval('digClock()', 1000); // setTimeout과 동일 but 영속적 주기로 핸들러 호출!
+    </script>
+</body>
+
+</html>

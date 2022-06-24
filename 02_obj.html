@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <script>
+        console.clear();
+        console.group('Methods');
+
+        const obj = {
+            m1: function () {             // m1 method
+                return "Hello Sonata";
+            },
+
+            m2: function (a) {            // m2 method
+                let result = a;
+                return result;
+            },
+
+            m3: function (a, b) {         // m3 method
+                let result = a + b;
+                return result;
+            }
+        }; // user-defined object
+        
+        document.querySelector('#msg1').innerText= obj.m1();
+        document.querySelector('#msg2').innerHTML= obj.m2(100);
+        document.querySelector('#msg3').innerHTML= obj.m3(100, 200);
+
+        // document.getElementById("msg1").innerHTML = obj.m1();
+        // document.getElementById("msg2").innerHTML = obj.m2(100);
+        // document.getElementById("msg3").innerHTML = obj.m3(100, 200);
+
+        console.groupEnd();
+    </script>
+</body>
+
+</html>

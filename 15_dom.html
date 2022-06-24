@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function add() {
+            console.clear();
+            console.group('add');
+
+            let header = document.createElement('h3');        // 요소 노드(<h3>태그) 생성
+            let textNode = document.createTextNode('내 이름은 홍길동입니다.');    // 텍스트 노드 생성
+            
+            header.appendChild(textNode);          // 요소 노드의 자식으로 텍스트 노드 추가
+            document.body.appendChild(header);     // <body> 태그에 header(<h3>태그) 자식으로 추가
+
+            console.groupEnd();
+        }; // add
+    </script>
+</head>
+
+<body>
+    <!-- 이벤트를 처리하기 위해 필요한 4가지
+        1) E.target     : <a> 태그
+        2) E.type       : 마우스 click
+        3) E.listener   : onclick 속성
+        4) E.handler    : add() 함수 -->
+        
+    <a href="#" onclick="javascript:add()">당신의 이름은 무엇입니까?</a>
+
+    <!-- 새로운 노드 요소가 여기에 추가된다 -->
+</body>
+
+</html>

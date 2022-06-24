@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+
+    <script>
+        // 1. 기본 생성자
+        document.querySelector("#d1").innerHTML = new Date();
+    
+        // 2. 1970.01.01 (UTC) 이후의 밀리초로 날짜와 시간 생성
+        document.querySelector("#d2").innerHTML = new Date(1491803527400);
+    
+        // 3. 날짜 형식의 문자열로 날짜 객체 생성
+        document.querySelector("#d3").innerHTML = new Date("October 15, 2018 06:18:07");
+    
+        // 4. 날짜를 지정해서 날짜 객체 생성 *주의사항 : 월(month)은 0부터 시작
+        document.querySelector("#d4").innerHTML = new Date(2018, 11, 25, 18, 30, 29);   
+    </script>
+</body>
+
+</html>

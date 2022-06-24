@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="carname"></p> 
+    <p id="carcolor"></p> 
+    <p id="carspeed"></p>
+    <script>
+        console.clear();
+        console.group('Using Object Literal')
+        
+        var car={
+            name: 'Sonata',
+            speed: 50,
+            color: 'white',
+            
+            start: function() {      // Method defined
+                return this.speed+10;
+            }
+        }; // user-defined object
+
+        console.log(car);
+        
+        var cname=document.querySelector("#carname");
+        cname.textContent=car.name;
+        // cname.textContent= `<p> ${car.name} </p>`;
+        // cname.innerHTML= `<h1> ${car.name} </h1>`;
+                
+        var colname=document.querySelector("#carcolor");
+        colname.textContent=car.color;
+        
+        var cspeed=document.querySelector("#carspeed");
+        cspeed.textContent=car.start();
+
+        console.groupEnd();
+    </script>
+</body>
+</html>
